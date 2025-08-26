@@ -6,6 +6,7 @@ import { Navbar } from "./Navbar"
 import { Github, Linkedin, Mail, ChevronDown, ChevronsLeftRight, Server, Database, Bug, Cloud, Puzzle, ExternalLink, MapPin, Phone, Send } from "lucide-react"
 import SkillCard from "./sub-components/SkillCard"
 import influenceX from "../assets/influenceX.png"
+import fostertails from "../assets/fostertails.png"
 import { p } from "framer-motion/client"
 
 export const Home = () => {
@@ -85,7 +86,7 @@ export const Home = () => {
             
         </div>
 
-        <div className="dark flex flex-col items-center min-h-screen bg-slate-800 ">
+        <div className="dark flex flex-col items-center min-h-screen bg-gradient-to-b from-slate-800 to bg-slate-900 ">
             <section className="flex max-w-6xl flex-col items-center" id="skills">
                 <div className="mt-20 w-[80%]">
                     <h1 className="text-5xl text-white text-center">Techincal Excellence</h1>
@@ -163,7 +164,7 @@ export const Home = () => {
                             <div className="absolute w-full  inset-0 bg-gradient-to-br from-green-500 to-green-800 rounded-2xl -rotate-2 translate-x-2 translate-y-2 transition-transform duration-300  group-hover:rotate-[-5deg] group-hover:scale-105">
                             </div>
                             <div className="ml-2 relative transition-transform duration-300  w-full h-80 bg-white rounded-2xl shadow-lg rotate-1 hover:scale-105 bg-gradient-to-br from-green-500 to-green-800">
-                                <img src={influenceX} alt="" className="w-full rounded-2xl hover:opacity-70 h-full"/>
+                                <img src={fostertails} alt="" className="w-full rounded-2xl hover:opacity-70 h-full"/>
                             </div>
 
                         </div>
@@ -236,7 +237,7 @@ export const Home = () => {
                 
             
             </section>
-            <div className="text-slate-400 mb-36">
+            <div className="text-slate-400 mb-24">
                     © 2025 Ankit Lathi. Crafted with passion and attention to detail.
                 </div>
 
