@@ -106,14 +106,23 @@ export default function SkillCube() {
     },
   ];
 
-  const transforms = [
-    "translateZ(160px)", // front
-    "rotateY(180deg) translateZ(160px)", // back
-    "rotateY(90deg) translateZ(160px)", // right
-    "rotateY(-90deg) translateZ(160px)", // left
-    "rotateX(90deg) translateZ(160px)", // top
-    "rotateX(-90deg) translateZ(160px)", // bottom
+  const mdTransforms = [
+    "translateZ(154px)", // front
+    "rotateY(180deg) translateZ(154px)", // back
+    "rotateY(90deg) translateZ(154px)", // right
+    "rotateY(-90deg) translateZ(154px)", // left
+    "rotateX(90deg) translateZ(154px)", // top
+    "rotateX(-90deg) translateZ(154px)", // bottom
   ];
+  const smTransforms = [
+    "translateZ(115px)", // front
+    "rotateY(180deg) translateZ(115px)", // back
+    "rotateY(90deg) translateZ(115px)", // right
+    "rotateY(-90deg) translateZ(115px)", // left
+    "rotateX(90deg) translateZ(115px)", // top
+    "rotateX(-90deg) translateZ(115px)", // bottom
+  ];
+  
 
   return (
     <div
@@ -134,14 +143,16 @@ export default function SkillCube() {
       >
         {/* Cube faces */}
         {cubeFaces.map((face, index) => (
+          <>
           <div
             key={index}
-            className="absolute p-4 m-4 inset-0 w-72 h-72 rounded-3xl border border-white/20 backdrop-blur-sm overflow-hidden"
+            className="absolute p-4 m-4 inset-0 w-72 h-72 rounded-3xl border border-white/20 backdrop-blur-sm overflow-hidden hidden md:block"
             style={{
-              transform: transforms[index],
+              transform: mdTransforms[index],
               opacity: 0.9,
             }}
           >
+            
             {/* Face content */}
             <div className="relative w-full h-full flex flex-col items-center justify-center p-8 text-white">
               {/* Main icon */}
@@ -167,7 +178,44 @@ export default function SkillCube() {
               </div>
             </div>
           </div>
+
+          <div
+            key={index}
+            className="absolute p-4 m-4 inset-0 w-56 h-56 rounded-3xl border border-white/20 backdrop-blur-sm overflow-hidden block md:hidden"
+            style={{
+              transform: smTransforms[index],
+              opacity: 0.9,
+            }}
+          >
+            
+            {/* Face content */}
+            <div className="relative w-full h-full flex flex-col items-center justify-center  text-white">
+              {/* Main icon */}
+              <div className="mb-2">
+                <div className="w-16 h-16  bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm shadow-lg">
+                  <face.icon size={32} className="text-white" />
+                </div>
+              </div>
+
+              {/* Label */}
+              <h3 className="text-xl mb-4 text-center">{face.label}</h3>
+
+              {/* Tech list */}
+              <div className="flex flex-wrap gap-2 justify-center">
+                {face.techs.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-white/20 rounded-full text-[12px] backdrop-blur-sm border border-white/30"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+          </>
         ))}
+
       </motion.div>
 
       {/* Glow under cube */}
