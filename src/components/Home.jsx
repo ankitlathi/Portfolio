@@ -79,7 +79,7 @@ export const Home = () => {
                 </div>
                
             </div>
-             <a href="" className="mt-12 flex flex-col items-center animate-bounce text-white hover:text-sky-500 text-sm font-light">
+             <a href="#projects" className="mt-12 flex flex-col items-center animate-bounce text-white hover:text-sky-500 text-sm font-light">
                 <p >Explore My Work</p>
                 <ChevronDown />
             </a>
@@ -134,9 +134,9 @@ export const Home = () => {
                                 <h6 className="text-xs text-white bg-gradient-to-r from-blue-600 to-purple-600 py-[2px] px-2 rounded-lg w-fit">TailwindCSS</h6>
                             </div>
                             <div className="mt-8">
-                                <button className="bg-gradient-to-r from-blue-600 to-purple-600 flex px-5 py-3 rounded-2xl text-white "><a href="https://influencex-marketplace.vercel.app/"></a>
+                                <a href="https://influencex-marketplace.vercel.app/"><button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 flex px-5 py-3 rounded-2xl text-white ">
                                 <ExternalLink size={18} className="mr-2 mt-[2px]"/>View Live
-                                </button>
+                                </button></a>
                             </div>
                         </div>  
 
@@ -154,9 +154,10 @@ export const Home = () => {
                                 <h6 className="text-xs text-white bg-gradient-to-r from-green-500 to-green-800 py-[2px] px-2 rounded-lg w-fit">TailwindCSS</h6>
                             </div>
                             <div className="mt-8">
-                                <button className="bg-gradient-to-r from-green-500 to-green-800 flex px-5 py-3 rounded-2xl text-white "><a href="https://influencex-marketplace.vercel.app/"></a>
+                                <a href="https://influencex-marketplace.vercel.app/">
+                                <button className="bg-gradient-to-r from-green-500 to-green-800 hover:from-green-600 hover:to-green-800 flex px-5 py-3 rounded-2xl text-white ">
                                 <ExternalLink size={18} className="mr-2 mt-[2px]"/>View Live
-                                </button>
+                                </button></a>
                             </div>
                         </div>
                         <div className="relative group  h-80 flex">
@@ -222,7 +223,7 @@ export const Home = () => {
                         <textarea
                         rows={2} 
                         type="text"
-                        placeholder="Subject"
+                        placeholder="Write your message here..."
                         className="w-full rounded-lg bg-slate-800/60 text-slate-100 placeholder:text-slate-400 border border-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/30 outline-none p-3"
                         />
                         <button type="submit"
