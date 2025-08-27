@@ -18,7 +18,7 @@ export const Home = () => {
         setResult("Sending...")
 
         const formData = new FormData(e.target)
-        formData.append("access_key", "fd19f3e1-1190-4737-8fec-ae1915353b3b")
+        formData.append("access_key", "d768fb1b-d6b8-4e46-82b3-cea91995e341")
 
         const response = await fetch("https://api.web3forms.com/submit",{
             method: "POST",
@@ -69,13 +69,13 @@ export const Home = () => {
             </div>
             <div className="flex gap-x-6 mt-8">
                 <div className="bg-slate-800 text-gray-300 hover:text-sky-500 shadow border-[1px] border-slate-700 hover:border-sky-500 rounded-xl p-2 hover:animate-pulseLogo ">
-                    <a href="" className=""><Github /></a>
+                    <a href="https://github.com/ankitlathi" target="_blank" rel="noopener noreferrer" className=""><Github /></a>
                 </div>
                 <div className="bg-slate-800 text-gray-300 hover:text-sky-500 shadow border-[1px] border-slate-700 hover:border-sky-500 rounded-xl p-2 hover:animate-pulseLogo ">
-                    <a href="" className=""><Linkedin /></a>
+                    <a href="https://www.linkedin.com/in/ankit-lathi/" target="_blank" rel="noopener noreferrer"  className=""><Linkedin /></a>
                 </div>
                 <div className="bg-slate-800 text-gray-300 hover:text-sky-500 shadow border-[1px] border-slate-700 hover:border-sky-500 rounded-xl p-2 hover:animate-pulseLogo ">
-                    <a href="" className=""><Mail /></a>
+                    <a href="mailto:lathiankit1050@gmail.com" target="_blank" rel="noopener noreferrer"  className=""><Mail /></a>
                 </div>
                
             </div>
@@ -134,7 +134,7 @@ export const Home = () => {
                                 <h6 className="text-xs text-white bg-gradient-to-r from-blue-600 to-purple-600 py-[2px] px-2 rounded-lg w-fit">TailwindCSS</h6>
                             </div>
                             <div className="mt-8 flex justify-center md:justify-start">
-                                <a href="https://influencex-marketplace.vercel.app/"><button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 flex px-5 py-3 rounded-2xl text-white ">
+                                <a href="https://influencex-marketplace.vercel.app/" target="_blank" rel="noopener noreferrer" ><button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 flex px-5 py-3 rounded-2xl text-white ">
                                 <ExternalLink size={18} className="mr-2 mt-[2px]"/>View Live
                                 </button></a>
                             </div>
@@ -165,7 +165,7 @@ export const Home = () => {
                                 <h6 className="text-xs text-white bg-gradient-to-r from-green-500 to-green-800 py-[2px] px-2 rounded-lg w-fit">TailwindCSS</h6>
                             </div>
                             <div className="mt-8 flex justify-center md:justify-start">
-                                <a href="https://fostertails.onrender.com/">
+                                <a href="https://fostertails.onrender.com/" target="_blank" rel="noopener noreferrer" >
                                 <button className="bg-gradient-to-r from-green-500 to-green-800 hover:from-green-600 hover:to-green-800 flex px-5 py-3 rounded-2xl text-white ">
                                 <ExternalLink size={18} className="mr-2 mt-[2px]"/>View Live
                                 </button></a>
@@ -216,25 +216,30 @@ export const Home = () => {
                     </div>
                     <div className="bg-slate-700 opacity-80 rounded-xl p-4 py-6 md:py-8 md:p-8 mb-16">
                         <form onSubmit={handleSubmit} className="space-y-4">
+                        <input type="hidden" name="access_key" value="d768fb1b-d6b8-4e46-82b3-cea91995e341" />
                         <div className="grid grid-cols-2 gap-6">
                             <input 
                             type="text"
+                            name="name"
                             placeholder="Your Name"
                             className="w-full text-sm md:text-base rounded-lg bg-slate-800/60 text-slate-100 placeholder:text-slate-400 border border-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/30 outline-none p-3" />
                             <input 
                             type="email"
+                            name="email"
                             placeholder="Your Email"
                             className="w-full text-sm md:text-base rounded-lg bg-slate-800/60 text-slate-100 placeholder:text-slate-400 border border-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/30 outline-none px-3 py-2 md:py-3" />
                         </div>
                         <input 
                         type="text"
                         placeholder="Subject"
+                        name="subject"
                         className="w-full text-sm md:text-base rounded-lg bg-slate-800/60 text-slate-100 placeholder:text-slate-400 border border-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/30 outline-none px-3 py-2 md:py-3"
                         />
                         <textarea
                         rows={2} 
                         type="text"
                         placeholder="Write your message here..."
+                        name="message"
                         className="w-full text-sm md:text-base rounded-lg bg-slate-800/60 text-slate-100 placeholder:text-slate-400 border border-slate-600 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/30 outline-none px-3 py-2 md:py-3"
                         />
                         <button type="submit"
