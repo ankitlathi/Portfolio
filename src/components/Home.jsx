@@ -108,10 +108,10 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className="mx-8 max-w-6xl" id="projects">
+            <section className="mx-8 max-w-6xl px-2 md:px-0" id="projects">
                 <div className="flex flex-col items-center">
                     <h1 className="text-white text-3xl md:text-5xl text-center">Recent Projects</h1>
-                    <p className="text-gray-300 mt-4 text-sm md:w-[60%] text-center">Showcasing innovative solutions that combine cutting-edge technology with exceptional user experience design</p>
+                    <p className="text-gray-300 mt-4 text-sm md:text-lg md:w-[60%] text-center">Showcasing innovative solutions that combine cutting-edge technology with exceptional user experience design</p>
                 </div>
                 <div className="mt-8  md:grid md:grid-cols-2 gap-8" >
                         <div className="relative group h-64 px-2 md:px-0 md:h-80 flex">
@@ -165,7 +165,7 @@ export const Home = () => {
                                 <h6 className="text-xs text-white bg-gradient-to-r from-green-500 to-green-800 py-[2px] px-2 rounded-lg w-fit">TailwindCSS</h6>
                             </div>
                             <div className="mt-8 flex justify-center md:justify-start">
-                                <a href="https://influencex-marketplace.vercel.app/">
+                                <a href="https://fostertails.onrender.com/">
                                 <button className="bg-gradient-to-r from-green-500 to-green-800 hover:from-green-600 hover:to-green-800 flex px-5 py-3 rounded-2xl text-white ">
                                 <ExternalLink size={18} className="mr-2 mt-[2px]"/>View Live
                                 </button></a>
